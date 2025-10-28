@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>中田歩希 - 連絡先</title>
+    <meta
+      name="description"
+      content="中田歩希の連絡先。お気軽にご連絡ください。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* 名刺専用のカスタムスタイル */
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .contact-wrapper {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      .profile-card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 40px 32px;
+        box-shadow: 0 16px 48px rgba(255, 180, 162, 0.2);
+        text-align: center;
+      }
+
+      .profile-card__name {
+        font-size: clamp(2rem, 5vw, 2.8rem);
+        font-weight: 700;
+        margin: 0 0 12px 0;
+        color: var(--color-text);
+      }
+
+      .profile-card__title {
+        font-size: 1.1rem;
+        color: var(--color-text-muted);
+        margin: 0 0 32px 0;
+      }
+
+      .profile-card__links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .contact-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 16px 24px;
+        border-radius: 16px;
+        font-weight: 600;
+        font-size: 1.05rem;
+        transition: all 0.2s ease;
+        text-decoration: none;
+      }
+
+      .contact-link--primary {
+        background: var(--color-primary);
+        color: #060606;
+        box-shadow: 0 8px 24px rgba(255, 180, 162, 0.35);
+      }
+
+      .contact-link--primary:hover {
+        background: var(--color-primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(255, 180, 162, 0.45);
+      }
+
+      .contact-link--secondary {
+        background: #fff;
+        color: var(--color-text);
+        border: 2px solid var(--color-border);
+        box-shadow: 0 8px 24px rgba(255, 180, 162, 0.35);
+
+      }
+
+      .contact-link--secondary:hover {
+        background: var(--color-background-soft);
+        border-color: var(--color-primary);
+        transform: translateY(-2px);
+      }
+
+      .contact-link__icon {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      .profile-card__note {
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+        margin: 0;
+        padding-top: 16px;
+        border-top: 1px solid var(--color-border);
+      }
+
+      .coha-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 24px;
+        padding: 12px 20px;
+        background: var(--color-background-soft);
+        border-radius: 12px;
+        color: var(--color-text);
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.2s ease;
+      }
+
+      .coha-link:hover {
+        background: var(--color-primary);
+        color: #727272;
+        transform: translateY(-2px);
+      }
+
+      .coha-link__logo {
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+      }
+
+      .profile-card__header img{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 16px;
+      }
+
+      @media (max-width: 480px) {
+        .profile-card {
+          padding: 32px 24px;
+        }
+
+        .contact-link {
+          padding: 14px 20px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact-wrapper">
+      <div class="profile-card">
+        <div class="profile-card__header">
+            <img src="img/K3M35705.jpg" alt="Profile Picture" class="profile-card__image" />
+            <h1 class="profile-card__name">中田歩希</h1>
+            <p class="profile-card__title">青山学院大学/学生団体Coha<br>共同代表</p>
+        </div>
+        <div class="profile-card__links">
+            <a class="contact-link contact-link--primary" href="mailto:a6224089@aoyama.jp">
+              <img src="img/メールアイコン.png" alt="" class="contact-link__icon" />
+            <span>メールを送る</span>
+            </a>
+
+          <a class="contact-link contact-link--secondary" href="https://www.instagram.com/diversity_nakata" target="_blank" rel="noopener">
+            <img src="img/Instagram_Glyph_Gradient.png" alt="" class="contact-link__icon" />
+            <span>Instagram</span>
+          </a>
+
+          <a class="contact-link contact-link--secondary" href="https://www.facebook.com/profile.php?id=100052421835228" target="_blank" rel="noopener">
+            <img src="img/Facebook_Logo_Primary.png" alt="" class="contact-link__icon" />
+            <span>Facebook</span>
+          </a>
+
+          <a class="contact-link contact-link--secondary" href="https://x.com/diversity_ayuki" target="_blank" rel="noopener">
+            <img src="img/logo-black.png" alt="" class="contact-link__icon" />
+            <span>X</span>
+          </a>
+        </div>
+
+        <p class="profile-card__note">
+          お気軽にご連絡ください<br />
+          通常0〜3日以内に返信いたします
+        </p>
+
+        <a class="coha-link" href="index.html">
+          <img src="img/LOGO2.png" alt="Coha" class="coha-link__logo" />
+          <span>Cohaについて詳しく見る</span>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      // 簡易的なアクセス解析(オプション)
+      console.log('Contact card loaded:', new Date().toISOString());
+    </script>
+  </body>
+</html>
