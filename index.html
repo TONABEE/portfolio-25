@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>中田歩希 - 連絡先</title>
+    <title>中田歩希 - Formeet</title>
     <meta
       name="description"
-      content="中田歩希の連絡先。お気軽にご連絡ください。"
+      content="Formeet代表 中田歩希。連絡先と、なぜこれをやるのか。"
     />
+    <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -111,38 +112,73 @@
         border-top: 1px solid var(--color-border);
       }
 
-      .coha-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: 24px;
-        padding: 12px 20px;
-        background: var(--color-background-soft);
-        border-radius: 12px;
-        color: var(--color-text);
-        text-decoration: none;
-        font-size: 0.95rem;
-        transition: all 0.2s ease;
-      }
-
-      .coha-link:hover {
-        background: var(--color-primary);
-        color: #727272;
-        transform: translateY(-2px);
-      }
-
-      .coha-link__logo {
-        width: 28px;
-        height: 28px;
-        border-radius: 8px;
-      }
-
       .profile-card__header img{
         width: 120px;
         height: 120px;
         border-radius: 50%;
         object-fit: cover;
-        margin-bottom: 16px;
+        margin: 0 auto 16px;
+        display: block;
+      }
+
+      .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .story-card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 40px 32px;
+        box-shadow: 0 16px 48px rgba(255, 180, 162, 0.2);
+        text-align: left;
+        line-height: 1.95;
+        word-break: normal;
+        line-break: strict;
+      }
+
+      .story-card h2 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 32px 0 12px 0;
+        padding-left: 12px;
+        border-left: 4px solid var(--color-primary);
+        color: var(--color-text);
+      }
+
+      .story-card h2:first-child {
+        margin-top: 0;
+      }
+
+      .story-card p {
+        margin: 0 0 1em 0;
+      }
+
+      .story-card ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .story-card li {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .story-card li:last-child {
+        border-bottom: 0;
+      }
+
+      .story-card a {
+        color: var(--color-primary-dark);
+        text-decoration: underline;
+      }
+
+      @media (max-width: 480px) {
+        .story-card {
+          padding: 32px 24px;
+        }
       }
 
       @media (max-width: 480px) {
@@ -163,15 +199,15 @@
         <div class="profile-card__header">
             <img src="img/K3M35705.jpg" alt="Profile Picture" class="profile-card__image" />
             <h1 class="profile-card__name">中田歩希</h1>
-            <p class="profile-card__title">青山学院大学/学生団体Coha<br>共同代表</p>
+            <p class="profile-card__title">Formeet 代表</p>
         </div>
         <div class="profile-card__links">
-            <a class="contact-link contact-link--primary" href="mailto:a6224089@aoyama.jp">
+            <a class="contact-link contact-link--primary" href="mailto:info@formeet.jp">
               <img src="img/メールアイコン.png" alt="" class="contact-link__icon" />
             <span>メールを送る</span>
             </a>
 
-          <a class="contact-link contact-link--secondary" href="https://www.instagram.com/diversity_nakata" target="_blank" rel="noopener">
+          <a class="contact-link contact-link--secondary" href="https://www.instagram.com/formeet_nakata/" target="_blank" rel="noopener">
             <img src="img/Instagram_Glyph_Gradient.png" alt="" class="contact-link__icon" />
             <span>Instagram</span>
           </a>
@@ -180,28 +216,39 @@
             <img src="img/Facebook_Logo_Primary.png" alt="" class="contact-link__icon" />
             <span>Facebook</span>
           </a>
-
-          <a class="contact-link contact-link--secondary" href="https://x.com/diversity_ayuki" target="_blank" rel="noopener">
-            <img src="img/logo-black.png" alt="" class="contact-link__icon" />
-            <span>X</span>
-          </a>
         </div>
 
         <p class="profile-card__note">
           お気軽にご連絡ください<br />
           通常0〜3日以内に返信いたします
         </p>
-
-        <a class="coha-link" href="http://tonabee.github.io/-Coha-homepage/" target="_blank" rel="noopener">
-          <img src="img/LOGO2.png" alt="Coha" class="coha-link__logo" />
-          <span>Cohaについて詳しく見る</span>
-        </a>
       </div>
+
+      <section class="story-card">
+        <h2>つくりたい社会</h2>
+        <p>誰も「普通なふり」も「わかったふり」もしなくて済む社会を作る。</p>
+
+        <h2>なぜ私が、これをやるのか</h2>
+        <p>おそらくここにいる誰よりも、私自身が怒られて生きてきました。<br />
+        「なんで当たり前のことができないの？」と解決策のない怒られ方をされ、「普通」を演じた結果、心身に限界が来て高校に通えなかった時期があります。その後、本郷高校を卒業しました。</p>
+        <p>そして、とても優秀でポジティブだった私の友人も、バイトでのマルチタスクができず、パニックになり鬱っぽくなってしまいました。彼に「相談すればいいんじゃない？」と伝えると、「こんなみんなができていること、誰にも相談できないよ」と言ったのです。</p>
+
+        <h2>道のり</h2>
+        <p>社会のために何かできないかと考え、その経験から、学生ボランティア団体 <a href="http://tonabee.github.io/-Coha-homepage/" target="_blank" rel="noopener">Coha</a> を立ち上げました。そこには、相談できず心と体をすり減らし、支援を必要とする人がたくさんいました。社会に求められることができずに自己嫌悪に陥り、体を壊す。だからこそ、自分の特性のコントロールをただ誰かに委ねるのではなく、自分自身で折り合いをつけ、相談していく力が必要です。</p>
+        <p>青山学院大学で、発達障害当事者、支援者、企業の方、300人以上に話を聞きました。就労移行支援施設でインターンをし、エンジニアとして1年働きました。</p>
+
+        <h2>いま</h2>
+        <p>いまは休学して、Formeet という「人の取扱説明書」をつくるサービスを、一人で作っています。本人の特性やつまずきを言葉にして、相手に伝わる形に翻訳して渡します。</p>
+
+        <h2>実績</h2>
+        <ul>
+          <li>2025年8月　経済産業省主催 社会起業家アクセラレーションプログラム「ゼロイチ」3期 採択</li>
+          <li>2025年11月　青山ビジネスコンテスト JAL賞 受賞</li>
+          <li>2026年3月　パナソニック主催 garage program 104期 採択</li>
+          <li>2026年7月　taliki主催 com-pj 7期 採択</li>
+        </ul>
+      </section>
     </div>
 
-    <script>
-      // 簡易的なアクセス解析(オプション)
-      console.log('Contact card loaded:', new Date().toISOString());
-    </script>
   </body>
 </html>
