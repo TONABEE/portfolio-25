@@ -125,12 +125,41 @@
         font-weight: 700;
         font-size: var(--fs-h3);
         line-height: var(--lh-h3);
-        margin: var(--space-6) 0 var(--space-3);
+        margin: 0;
         padding-left: var(--space-3);
         border-left: 4px solid var(--primary);
         color: var(--ink);
       }
-      .story-card h2:first-child { margin-top: 0; }
+
+      .story-section + .story-section { margin-top: var(--space-2); }
+      .story-section > summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-3);
+        min-height: 44px;
+        cursor: pointer;
+        list-style: none;
+        border-radius: var(--radius-sm);
+      }
+      .story-section > summary::-webkit-details-marker { display: none; }
+      .story-section > summary::marker { content: ""; }
+      .story-section > summary::after {
+        content: "";
+        flex: none;
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 8px solid var(--primary-deep);
+        transition: transform 0.2s ease;
+      }
+      .story-section[open] > summary::after { transform: rotate(180deg); }
+      .story-section > summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+      .story-section__body { padding: var(--space-2) 0 var(--space-3); }
+      @media (prefers-reduced-motion: reduce) {
+        .story-section > summary::after { transition: none; }
+      }
 
       .story-card p {
         font-size: var(--fs-body);
@@ -188,27 +217,47 @@
       </div>
 
       <section class="story-card">
-        <h2>つくりたい社会</h2>
-        <p>誰も「普通なふり」も「わかったふり」もしなくて済む社会を作る。</p>
+        <details class="story-section" open>
+          <summary><h2>つくりたい社会</h2></summary>
+          <div class="story-section__body">
+          <p>誰も「普通なふり」も「わかったふり」もしなくて済む社会を作る。</p>
+          </div>
+        </details>
 
-        <h2>なぜ私が、これをやるのか</h2>
-        <p>おそらくここにいる誰よりも、私自身が怒られて生きてきました。「なんで当たり前のことができないの？」と解決策のない怒られ方をされ、「普通」を演じた結果、心身に限界が来て高校に通えなかった時期があります。その後、本郷高校を卒業しました。</p>
+        <details class="story-section" open>
+          <summary><h2>なぜ私が、これをやるのか</h2></summary>
+          <div class="story-section__body">
+          <p>おそらくここにいる誰よりも、私自身が怒られて生きてきました。「なんで当たり前のことができないの？」と解決策のない怒られ方をされ、「普通」を演じた結果、心身に限界が来て高校に通えなかった時期があります。その後、本郷高校を卒業しました。</p>
         <p>そして、とても優秀でポジティブだった私の友人も、バイトでのマルチタスクができず、パニックになり鬱っぽくなってしまいました。彼に「相談すればいいんじゃない？」と伝えると、「こんなみんなができていること、誰にも相談できないよ」と言ったのです。</p>
+          </div>
+        </details>
 
-        <h2>道のり</h2>
-        <p>社会のために何かできないかと考え、その経験から、学生ボランティア団体 <a href="http://tonabee.github.io/-Coha-homepage/" target="_blank" rel="noopener">Coha</a> を立ち上げました。そこには、相談できず心と体をすり減らし、支援を必要とする人がたくさんいました。社会に求められることができずに自己嫌悪に陥り、体を壊す。だからこそ、自分の特性のコントロールをただ誰かに委ねるのではなく、自分自身で折り合いをつけ、相談していく力が必要です。</p>
+        <details class="story-section">
+          <summary><h2>道のり</h2></summary>
+          <div class="story-section__body">
+          <p>社会のために何かできないかと考え、その経験から、学生ボランティア団体 <a href="http://tonabee.github.io/-Coha-homepage/" target="_blank" rel="noopener">Coha</a> を立ち上げました。そこには、相談できず心と体をすり減らし、支援を必要とする人がたくさんいました。社会に求められることができずに自己嫌悪に陥り、体を壊す。だからこそ、自分の特性のコントロールをただ誰かに委ねるのではなく、自分自身で折り合いをつけ、相談していく力が必要です。</p>
         <p>青山学院大学で、発達障害当事者、支援者、企業の方、300人以上に話を聞きました。就労移行支援施設でインターンをし、エンジニアとして1年働きました。</p>
+          </div>
+        </details>
 
-        <h2>いま</h2>
-        <p>いまは休学して、Formeet という「人の取扱説明書」をつくるサービスを、一人で作っています。本人の特性やつまずきを言葉にして、相手に伝わる形に翻訳して渡します。</p>
+        <details class="story-section">
+          <summary><h2>いま</h2></summary>
+          <div class="story-section__body">
+          <p>いまは休学して、Formeet という「人の取扱説明書」をつくるサービスを、一人で作っています。本人の特性やつまずきを言葉にして、相手に伝わる形に翻訳して渡します。</p>
+          </div>
+        </details>
 
-        <h2>実績</h2>
-        <ul>
+        <details class="story-section">
+          <summary><h2>実績</h2></summary>
+          <div class="story-section__body">
+          <ul>
           <li>2025年8月　経済産業省主催 社会起業家アクセラレーションプログラム「ゼロイチ」3期 採択</li>
           <li>2025年11月　青山ビジネスコンテスト JAL賞 受賞</li>
           <li>2026年3月　パナソニック主催 garage program 104期 採択</li>
           <li>2026年7月　taliki主催 com-pj 7期 採択</li>
         </ul>
+          </div>
+        </details>
       </section>
     </div>
 
